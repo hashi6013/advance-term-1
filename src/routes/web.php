@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ShopController::class, 'index'])->name('index');
+Route::get('/search', [ShopController::class, 'search'])->name('search');
+Route::get('/detail/{shop_id}', [ShopController::class, 'detail'])->name('detail');
+Route::get('/done', [ReservationController::class, 'store'])->name('done');

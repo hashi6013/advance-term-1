@@ -1,0 +1,205 @@
+.detail-container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+}
+
+.restaurant-detail {
+    width: 90%;
+}
+
+.restaurant-detail__layout {
+    display: flex;
+    align-items: center;
+}
+
+.restaurant-detail__title {
+    margin-left: 10px;
+    font-size: 2.0rem;
+}
+
+.fa-chevron-left {
+    padding: 3px 6px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 3px 3px 2px #a4a4a4;
+}
+
+.restaurant-detail__img img {
+    width: 100%;
+    aspect-ratio: 3/2;
+}
+
+.restaurant-detail__tag {
+    margin-top: 10px;
+}
+
+.restaurant-detail__tag-item {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.restaurant-detail__overview {
+    margin-top: -15px;
+}
+
+.restaurant-detail__overview-text {
+    font-size: 1.2rem;
+}
+
+.reservation {
+    background-color: #305dff;
+    height: 80vh;
+    margin-top: -30px;
+    position: relative;
+    box-shadow: 3px 3px 2px #a4a4a4;
+    border-radius: 4px 4px 0 0;
+    z-index: 1;
+}
+
+.reservation-title,
+.reservation-input__content-term,
+.reservation-input__content-description {
+    color: #fff;
+}
+
+.reservation-title {
+    font-size: 1.7rem;
+}
+
+.reservation-container {
+    margin: 20px;
+}
+
+.reservation__select-date {
+    display: block;
+    width: 200px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.reservation__select-time,
+.reservation__select-number {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.reservation-input__content {
+    background-color: #4d7fff;
+}
+
+.reservation-input__content-list {
+    padding: 20px;
+}
+
+.reservation-input__content-list-layout {
+    display: flex;
+}
+
+.reservation-input__content-term {
+    width: 30%;
+    font-size: clamp(1.2rem, 1.3vw, 2.0rem);
+}
+
+.reservation-input__content-description {
+    font-size: clamp(1.2rem, 1.3vw, 2.0rem);
+}
+
+.reservation-button__submit {
+    width: 100%;
+}
+
+.reservation-button__submit {
+    position: absolute;
+    top: 100%;
+    padding: 10px 0;
+    color: #fff;
+    background-color: #0538ff;
+    border: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 3px 3px 2px #a4a4a4;
+}
+
+.reservation-button__submit:hover {
+    background-color: #fff;
+    color: #0538ff;
+    cursor: pointer;
+}
+
+.alert {
+    background-color: #fff;
+    height: 80vh;
+    position: relative;
+    box-shadow: 3px 3px 2px #a4a4a4;
+    border-radius: 4px 4px 0 0;
+}
+
+.alert-container {
+    padding: 100px 4% 0;
+    text-align: center;
+}
+
+.alert__content-text {
+    font-size: 2.0rem;
+}
+
+.alert__content-item {
+    margin-top: 60px;
+}
+
+.alert__content-item-link {
+    text-decoration: none;
+    background-color: #305dff;
+    padding: 5px 15px;
+    border-radius: 4px;
+    color: #fff;
+    z-index: 1;
+}
+
+.form__error {
+    color: #ff0000;
+}
+
+.review-item {
+    margin-left: 30px;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 5px 10px;
+    box-shadow: 3px 3px 2px #a4a4a4;
+    border-radius: 4px;
+}
+
+/* タブレット用ブレイクポイント */
+@media screen and (max-width: 768px) {
+    .detail-container {
+        display: block;
+    }
+    .restaurant-detail {
+        width: 100%;
+    }
+    .reservation {
+        margin-top: 50px;
+    }
+    .reservation-title {
+        padding-top: 10px;
+    }
+    .reservation__select-date {
+        width: 100%;
+    }
+    .alert {
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .alert__content-text {
+        color: #ff0000;
+    }
+}
