@@ -33,7 +33,8 @@
                 </p>
             </div>
         </div>
-        <form class="reservation" action="" method="post">
+        @if(Auth::check())
+        <form class="reservation" action="{{route('done')}}" method="post">
             @csrf
             <div class="reservation-container">
                 <h3 class="reservation-title">予約</h3>
@@ -122,6 +123,18 @@
                     <button class="reservation-button__submit" type="submit">予約する</button>
             </div>
         </form>
+        @else
+        <div class="alert">
+            <div class="alert-container">
+                <div class="alert__content">
+                    <p class="alert__content-text">予約にはログインが必要です</p>
+                </div>
+                <div class="alert__content-item">
+                    <a class="alert__content-item-link" href="/login">ログインする</a>
+                </div>
+            </div>
+        </div>
+        @endif
     </div>
 </div>
 <script>

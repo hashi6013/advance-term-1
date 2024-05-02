@@ -18,10 +18,10 @@
                 </button>
                 <a class="header__logo" href="{{route('index')}}">Rese</a>
             </div>
-            <!-- ハンバーガーナビ -->
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a class="nav__item-link" href="/">Home</a></li>
+                    @if(Auth::check())
                     <li class="nav__item">
                         <form class="logout-form" action="/logout" method="post">
                             @csrf
@@ -29,8 +29,10 @@
                         </form>
                     </li>
                     <li class="nav__item"><a class="nav__item-link" href="/mypage">Mypage</a></li>
+                    @else
                     <li class="nav__item"><a class="nav__item-link" href="/register">Registration</a></li>
                     <li class="nav__item"><a class="nav__item-link" href="/login">Login</a></li>
+                    @endif
                 </ul>
             </nav>
             @yield('search')

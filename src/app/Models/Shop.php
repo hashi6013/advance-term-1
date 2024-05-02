@@ -42,5 +42,20 @@ class Shop extends Model
     public function reviews() {
         return $this->hasMany('App\Models\Review');
     }
+    
+    public function favorite_by_auth_user()
+    {
+        $id = Auth::id();
+
+        $checkers = array();
+        foreach($this->favorites as $favorite) {
+            array_push($checkers, $favorite->user_id);
+        }
+        if (in_array($id, $checkers)) {
+            return true;
+        }else {
+            return false;
+        }
+    }
 
 }
