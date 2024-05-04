@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReservationRequest;
 use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Shop;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
-    public function store(Request $request)
+    public function store(ReservationRequest $request)
     {
         $user = Auth::user();
         $shops = Shop::find($request->shop_id);
@@ -32,7 +33,7 @@ class ReservationController extends Controller
         return view('edit', ['form' => $reservation]);
     }
 
-    public function update(Request $request)
+    public function update(ReservationRequest $request)
     {
         $form = $request->all();
         unset($form['_token']);
