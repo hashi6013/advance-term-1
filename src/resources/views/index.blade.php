@@ -5,7 +5,7 @@
 @endsection
 
 @section('search')
-<form class="search-form" action="{{route('search')}}" method="get">
+<form class="search-form" action="/search" method="get">
     @csrf
     <div class="search-form__group">
         <div class="search-form__select-container">

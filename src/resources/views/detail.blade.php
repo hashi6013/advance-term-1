@@ -9,7 +9,7 @@
     <div class="detail-container">
         <div class="restaurant-detail">
             <div class="restaurant-detail__layout">
-                <a href="{{route('index')}}" class="restaurant-detail__back">
+                <a href="/" class="restaurant-detail__back">
                     <i class="fa-solid fa-chevron-left"></i>
                 </a>
                 <h2 class="restaurant-detail__title">
@@ -34,7 +34,7 @@
             </div>
         </div>
         @if(Auth::check())
-        <form class="reservation" action="{{route('done')}}" method="post">
+        <form class="reservation" action="/done" method="post">
             @csrf
             <div class="reservation-container">
                 <h3 class="reservation-title">予約</h3>

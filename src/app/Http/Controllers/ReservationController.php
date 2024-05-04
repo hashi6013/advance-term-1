@@ -19,4 +19,24 @@ class ReservationController extends Controller
         ]));
         return view('done');
     }
+
+    public function destroy(Request $request)
+    {
+        Reservation::find($request->id)->delete();
+        return redirect('mypage')->with('message', '予約を取り消しました');
+    }
+
+    public function edit(Request $request)
+    {
+        $reservation = Reservation::find($request->id);
+        return view('edit', ['form' => $reservation]);
+    }
+
+    public function update(Request $request)
+    {
+        $form = $request->all();
+        unset($form['_token']);
+        Reservation::find($request->id)->update($form);
+        return redirect('mypage')->with('message', '予約を変更しました');
+    }
 }

@@ -17,9 +17,18 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', [ShopController::class, 'index'])->name('index');
-Route::get('/search', [ShopController::class, 'search'])->name('search');
-Route::get('/detail/{shop_id}', [ShopController::class, 'detail'])->name('detail');
-Route::post('/done', [ReservationController::class, 'store'])->name('done');
+Route::get('/', [ShopController::class, 'index']);
+Route::get('/search', [ShopController::class, 'search']);
+Route::get('/detail/{shop_id}', [ShopController::class, 'detail']);
+Route::post('/done', [ReservationController::class, 'store']);
 Route::get('/shop/favorite/{id}', [FavoriteController::class, 'favorite'])->name('shop.favorite');
 Route::get('/shop/unlike/{id}', [FavoriteController::class, 'unlike'])->name('shop.unlike');
+
+// 後でメールを追加
+Route::middleware('auth')->group(function () {
+    Route::get('/mypage', [ShopController::class, 'mypage']);
+});
+
+Route::delete('/mypage/delete', [ReservationController::class, 'destroy']);
+Route::get('/mypage/edit', [ReservationController::class, 'edit']);
+Route::patch('/mypage/edit', [ReservationController::class, 'update']);

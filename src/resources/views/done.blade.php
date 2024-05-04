@@ -10,7 +10,7 @@
         <div class="thanks__heading">
             <h2 class="thanks__heading-title">ご予約ありがとうございます</h2>
             <div class="thanks__link">
-                <a class="thanks__link-item" href="{{route('index')}}">戻る</a>
+                <a class="thanks__link-item" href="/">戻る</a>
             </div>
         </div>
     </div>
