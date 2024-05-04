@@ -1,0 +1,133 @@
+body {
+    color: #fff;
+}
+
+.edit-container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.edit__inner {
+    width: 550px;
+    margin: 0 auto;
+    box-shadow: 3px 3px 2px #a4a4a4;
+    border-radius: 4px;
+    background-color: #305dff;
+}
+
+.reservation-container {
+    padding: 10px 20px;
+}
+
+.reservation__title {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.reservation__list {
+    background-color: #4d7fff;
+    padding: 15px 10px;
+}
+
+.reservation__list-layout {
+    display: flex;
+}
+
+.reservation__list-layout:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+.reservation__list-term {
+    width: 30%;
+    font-size: 1.2rem;
+}
+
+.reservation__list-description {
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+.reservation__list-select {
+    width: 100%;
+}
+
+.edit-link {
+    text-align: center;
+}
+
+.edit-link__layout {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.edit-link__item {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 1px 5px;
+}
+
+.edit-link__button {
+    margin-left: 10px;
+    color: #0538ff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.edit-link__button:hover {
+    background-color: #fff;
+    color: #ff0000;
+}
+
+.form__error {
+    color: #ff0000;
+}
+
+/* タブレット用ブレイクポイント */
+@media screen and (max-width: 768px) {
+    .edit__inner {
+        width: 90%;
+    }
+
+    .form__error {
+        font-size: clamp(1.0rem, 1.3vw, 2.0rem);
+    }
+}
+
+/* スマートフォン用ブレイクポイント */
+@media screen and (max-width: 480px) {
+    .reservation__list-layout:not(:first-of-type) {
+        display: block;
+    }
+
+    .reservation__list-term {
+        width: 100%;
+    }
+
+    .reservation__list-description {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .reservation__list-input {
+        width: 100%;
+    }
+
+    .reservation__list-select {
+        width: 100%;
+    }
+
+    .edit-link__item {
+        margin: 0 auto;
+    }
+
+    .edit-link__layout:not(:first-of-type) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

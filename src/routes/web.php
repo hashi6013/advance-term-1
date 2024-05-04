@@ -30,3 +30,5 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::delete('/mypage/delete', [ReservationController::class, 'destroy']);
+Route::get('/mypage/edit', [ReservationController::class, 'edit']);
+Route::patch('/mypage/edit', [ReservationController::class, 'update']);
