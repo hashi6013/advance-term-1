@@ -16,7 +16,7 @@
                 <button type="button" class="hamburger">
                     <span></span>
                 </button>
-                <a class="header__logo" href="{{route('index')}}">Rese</a>
+                <a class="header__logo" href="/">Rese</a>
             </div>
             <nav class="nav">
                 <ul class="nav__list">

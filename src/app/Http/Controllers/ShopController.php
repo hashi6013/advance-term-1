@@ -52,4 +52,12 @@ class ShopController extends Controller
         $detail = Shop::find($id);
         return view('detail', compact('detail'));
     }
+
+    public function mypage()
+    {
+        $users = Auth::user();
+        $profiles = Reservation::where('user_id',  '=', Auth::user()->id)->get();
+        $favorites = Favorite::where('user_id', '=', Auth::user()->id)->get();
+        return view('mypage', compact('users', 'profiles', 'favorites'));
+    }
 }

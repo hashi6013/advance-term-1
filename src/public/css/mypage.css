@@ -1,0 +1,184 @@
+.mypage-container {
+    max-width: 1230px;
+    margin: 0 auto 10px;
+    padding: 0 40px;
+}
+
+.mypage__name {
+    text-align: center;
+}
+
+.status {
+    width: 40%;
+}
+
+.mypage-layout {
+    display: flex;
+    column-gap: 40px;
+}
+
+.status-container {
+    background-color: #305dff;
+    /* padding-bottom: 5px; */
+    border-radius: 4px;
+    box-shadow: 3px 3px 2px #a4a4a4;
+    height: 240px;
+    margin-bottom: 10px;
+}
+
+.status__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.status__number {
+    color: #fff;
+    font-size: clamp(1.2rem, 1.1vw, 1.5rem);
+}
+
+.status__delete {
+    border: none;
+    background-color: #305dff;
+    color: #fff;
+    cursor: pointer;
+    font-size: clamp(1.2rem, 1.1vw, 1.5rem);
+}
+
+.status__delete:hover {
+    color: #ff0c06;
+}
+
+.status__list-layout {
+    display: flex;
+    margin: 0 10px;
+}
+
+.status__list-term {
+    width: 30%;
+    color: #fff;
+    font-size: clamp(1.2rem, 1.1vw, 1.5rem);
+}
+
+.status__list-description {
+    color: #fff;
+    font-size: clamp(1.2rem, 1.1vw, 1.5rem);
+}
+
+.status__list-layout:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+.edit-link {
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.edit-link__item {
+    padding: 0 5px;
+    background-color: #fff;
+    text-decoration: none;
+    color: #305dff;
+    border-radius: 4px;
+    font-size: clamp(1.2rem, 1.1vw, 1.8rem);
+    cursor: pointer;
+}
+
+.card__content-link-layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-clock {
+    color: #fff;
+    font-size: clamp(1.2rem, 1.1vw, 1.5rem);
+}
+
+.favorite {
+    width: 100%;
+}
+
+.favorite-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    height: 240px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 2px #a4a4a4;
+}
+
+.card__img img {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+}
+
+.card__content {
+    margin: -10px 10px 0 10px;
+}
+
+.card__content-name {
+    font-size: 18px;
+}
+
+.card__content-tag {
+    display: flex;
+}
+
+.card__content-tag-item {
+    line-height: 0.5;
+    margin-top: -5px;
+}
+
+.card__content-link-item {
+    padding: 3px 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #305dff;
+    border-radius: 4px;
+}
+
+.fa-heart {
+    font-size: 2.0rem;
+    color: #ff0000;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.reservation__alert--success {
+    background-color: #d1e7de;
+    color: #000;
+    padding: 0 4%;
+}
+
+/* タブレット用ブレイクポイント */
+@media screen and (max-width: 768px) {
+    .mypage-layout {
+        padding: 0 2%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .status {
+        width: 100%;
+    }
+    .favorite-container {
+        display: block;
+    }
+    .card {
+        margin-top: 10px;
+    }
+}
+
+/* スマートフォン用ブレイクポイント */
+@media screen and (max-width: 480px) {
+    .mypage-layout {
+        display: block;
+    }
+}
