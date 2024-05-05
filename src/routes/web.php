@@ -17,13 +17,15 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+
+
 Route::middleware('auth', 'verified')->group(function () {
     Route::get('/', [ShopController::class, 'index']);
     Route::get('/search', [ShopController::class, 'search']);
     Route::get('/detail/{shop_id}', [ShopController::class, 'detail']);
-    Route::post('/done', [ReservationController::class, 'store']);
     Route::get('/shop/favorite/{id}', [FavoriteController::class, 'favorite'])->name('shop.favorite');
     Route::get('/shop/unlike/{id}', [FavoriteController::class, 'unlike'])->name('shop.unlike');
+    Route::post('/done', [ReservationController::class, 'store']);
     Route::get('/mypage', [ShopController::class, 'mypage']);
     Route::delete('/mypage/delete', [ReservationController::class, 'destroy']);
     Route::get('/mypage/edit', [ReservationController::class, 'edit']);
