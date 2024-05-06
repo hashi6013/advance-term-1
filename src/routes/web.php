@@ -5,6 +5,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,11 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/mypage/edit', [ReservationController::class, 'edit']);
     Route::patch('/mypage/edit', [ReservationController::class, 'update']);
 });
+
+// 管理者用
+// あとで、権限追加
+Route::get('/admin/home', [AdminController::class, 'admin']);
+Route::get('/admin/add', [AdminController::class, 'add']);
+Route::post('/admin/done', [AdminController::class, 'store']);
+
 

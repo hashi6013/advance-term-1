@@ -1,0 +1,80 @@
+.add-container {
+    max-width: 1230px;
+    margin: 0 auto 10px;
+    padding: 0 40px;
+    width: 600px;
+}
+
+.add__inner {
+    text-align: center;
+}
+
+.add__title {
+    font-size: 2.0rem;
+}
+
+.add-form {
+    margin: 30px auto;
+    border: 1px solid #a4a4a4;
+    border-radius: 4px;
+    background-color: #4d7fff;
+}
+
+.add-form-list__layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.add-form-list__layout:not(:first-child) {
+    margin-top: 20px;
+}
+
+.add-form-list__term {
+    width: 30%;
+    font-size: 1.5rem;
+    text-align: left;
+    color: #fff;
+}
+
+.add-form-list__description {
+    width: 70%;
+}
+
+.add-form-list__description-input {
+    border: none;
+}
+
+
+.add-form-list__description-input {
+    width: 80%;
+}
+
+.add-form__button {
+    margin: 30px 0 10px;
+}
+
+.add-form__button-submit {
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* スマートフォン用レスポンシブ */
+@media screen and (max-width: 480px) {
+    .add-container {
+        width: 300px;
+        padding: 0 10px;
+    }
+    .add-form-list__layout {
+        display: block;
+    }
+    .add-form-list__term {
+        text-align: center;
+        width: 100%;
+    }
+    .add-form-list__description {
+        margin-top: 10px;
+    }
+}
