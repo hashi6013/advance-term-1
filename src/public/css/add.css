@@ -61,6 +61,12 @@
     cursor: pointer;
 }
 
+.form__error {
+    color: #ff0000;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 /* スマートフォン用レスポンシブ */
 @media screen and (max-width: 480px) {
     .add-container {

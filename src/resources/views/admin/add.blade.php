@@ -17,16 +17,26 @@
                             <label for="name">名前</label>
                         </dt>
                         <dd class="add-form-list__description">
-                            <input class="add-form-list__description-input" type="text" name="name" id="name" placeholder="例:店舗太郎">
+                            <input class="add-form-list__description-input" type="text" name="name" id="name" placeholder="例:店舗太郎" value="{{ old('name') }}">
                         </dd>
+                    </div>
+                    <div class="form__error">
+                        @error('name')
+                        {{$message}}
+                        @enderror
                     </div>
                     <div class="add-form-list__layout">
                         <dt class="add-form-list__term">
                             <label for="email">メールアドレス</label>
                         </dt>
                         <dd class="add-form-list__description">
-                            <input class="add-form-list__description-input" type="text" name="email" id="email" placeholder="例:owner@example.com">
+                            <input class="add-form-list__description-input" type="text" name="email" id="email" placeholder="例:owner@example.com" value="{{ old('email') }}">
                         </dd>
+                    </div>
+                    <div class="form__error">
+                        @error('email')
+                        {{$message}}
+                        @enderror
                     </div>
                     <div class="add-form-list__layout">
                         <dt class="add-form-list__term">
@@ -36,6 +46,11 @@
                             <input class="add-form-list__description-input" type="text" name="password" id="password" placeholder="例:owner12345">
                         </dd>
                     </div>
+                    <div class="form__error">
+                        @error('password')
+                        {{$message}}
+                        @enderror
+                    </div>
                 </dl>
                 <input type="hidden" name="role">
                 <input type="hidden" name="email_verified_at">
@@ -43,7 +58,6 @@
                     <button class="add-form__button-submit" type="submit">
                         登録
                     </button>
-
                 </div>
             </form>
         </div>
