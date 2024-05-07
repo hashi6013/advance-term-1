@@ -1,0 +1,32 @@
+.owner-container {
+    max-width: 1230px;
+    margin: 0 auto 10px;
+    padding: 0 40px;
+}
+
+.owner__inner {
+    text-align: center;
+}
+
+.owner__title {
+    font-size: 2.0rem;
+}
+
+.owner__link-layout {
+    margin-top: 30px;
+}
+
+.owner__link {
+    padding: 10px 0;
+    font-size: 1.5rem;
+}
+
+.owner__link-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: #305dff;
+    box-shadow: 3px 3px 2px #a4a4a4;
+    border-radius: 4px;
+    cursor: pointer;
+}

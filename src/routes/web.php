@@ -45,6 +45,8 @@ Route::middleware('auth', 'admin')->group(function() {
 // オーナー用
 Route::middleware('auth', 'owner')->group(function() {
     Route::get('/owner/home', [OwnerController::class, 'owner']);
+    Route::get('/owner/add', [OwnerController::class, 'shop']);
+    Route::post('/owner/done', [OwnerController::class, 'done']);
 });
 
 
