@@ -6,6 +6,7 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\OwnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +39,10 @@ Route::middleware('auth', 'verified')->group(function () {
 Route::get('/admin/home', [AdminController::class, 'admin']);
 Route::get('/admin/add', [AdminController::class, 'add']);
 Route::post('/admin/done', [AdminController::class, 'store']);
+
+// オーナー用
+// あとで、権限追加
+Route::get('/owner/home', [OwnerController::class, 'owner']);
+
 
 
