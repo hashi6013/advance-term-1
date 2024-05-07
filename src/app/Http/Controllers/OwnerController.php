@@ -28,7 +28,7 @@ class OwnerController extends Controller
         $user = Auth::User();
         $request['user_id'] = $user->id;
         $img = $request->file('shop_image');
-        $path = $img->store('images', 'public');
+        $path = $img->store('shops', 'public');
         $request['shop_image'] = $path;
         $shop_add = $request->only([
             'shop_name',
