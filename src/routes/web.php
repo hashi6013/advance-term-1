@@ -37,6 +37,7 @@ Route::middleware('auth', 'verified')->group(function () {
 // 管理者用
 Route::middleware('auth', 'admin')->group(function() {
     Route::get('/admin/home', [AdminController::class, 'admin']);
+    Route::get('/admin/list', [AdminController::class, 'list']);
     Route::get('/admin/add', [AdminController::class, 'add']);
     Route::post('/admin/done', [AdminController::class, 'store']);
 });
