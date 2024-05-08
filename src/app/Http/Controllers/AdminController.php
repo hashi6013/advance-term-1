@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AdminRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -23,5 +24,10 @@ class AdminController extends Controller
         $owner = $request->only(['name', 'email', 'password', 'role', 'email_verified_at']);
         User::create($owner);
         return view('admin.done');
+    }
+
+    public function list() {
+        $owner_lists = Auth::user()::where('role', ['owner'])->simplePaginate(10);
+        return view('admin.list', compact('owner_lists'));
     }
 }

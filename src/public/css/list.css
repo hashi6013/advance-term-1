@@ -1,0 +1,38 @@
+.owner-list-container {
+    max-width: 1230px;
+    margin: 0 auto 10px;
+    padding: 0 40px;
+}
+
+.owner-list__inner {
+    text-align: center;
+}
+
+.owner-list__title {
+    font-size: 2.0rem;
+    margin-bottom: 50px;
+}
+.owner-list__table {
+    margin: 0 auto 10px;
+}
+
+.owner-list__table-row {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.owner-list__table-heading {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.owner-list__table-heading--email,
+.owner-list__table-detail--email {
+    padding-left: 30px;
+}
+
+.owner-list__table-detail {
+    font-size: 1.4rem;
+    border-bottom: 1px solid #4d7fff;
+}
+

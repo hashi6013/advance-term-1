@@ -16,7 +16,7 @@
                     <a href="/admin/add" class="admin__link-item">店舗代表者登録ページへ</a>
                 </p>
                 <p class="admin__link">
-                    <a href="" class="admin__link-item">店舗代表者一覧ページへ</a>
+                    <a href="/admin/list" class="admin__link-item">店舗代表者一覧ページへ</a>
                 </p>
             </div>
         </div>
