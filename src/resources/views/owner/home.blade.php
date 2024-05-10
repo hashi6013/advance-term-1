@@ -16,7 +16,7 @@
                     <a href="/owner/add" class="owner__link-item">店舗情報作成ページへ</a>
                 </p>
                 <p class="owner__link">
-                    <a href="" class="owner__link-item">予約情報確認ページへ</a>
+                    <a href="/owner/list?id={{$owner->id}}" class="owner__link-item">予約情報確認ページへ</a>
                 </p>
             </div>
         </div>
