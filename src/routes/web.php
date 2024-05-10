@@ -48,6 +48,7 @@ Route::middleware('auth', 'owner')->group(function() {
     Route::get('/owner/home', [OwnerController::class, 'owner']);
     Route::get('/owner/add', [OwnerController::class, 'shop']);
     Route::post('/owner/done', [OwnerController::class, 'done']);
+    Route::get('/owner/list', [OwnerController::class, 'list']);
 });
 
 
