@@ -1,0 +1,95 @@
+.shop-create-container {
+    max-width: 1230px;
+    margin: 0 auto 10px;
+    padding: 0 40px;
+}
+
+.shop-create__title {
+    text-align: center;
+    font-size: 2.0rem;
+}
+
+.shop-create__owner {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.shop-create-form-list {
+    width: 70%;
+    background-color: #4d7fff;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.shop-create-form-list__layout {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.shop-create-form-list__term {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.shop-create-form-list__description {
+    width: 60%;
+}
+
+.shop-create-form-list__description-input,
+.shop-create-form-list__description-textarea,
+.shop-create-form-list__description-select {
+    width: 80%;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.shop-create-form-list__description-textarea {
+    height: 50px;
+}
+
+.shop-create-form__button {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.shop-create-form__button-submit {
+    background-color: #4d7fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.shop-create-form__button-submit:hover {
+    background-color: #fff;
+    color: #4d7fff;
+}
+
+/* タブレット用ブレイクポイント */
+@media screen and (max-width: 768px) {
+    .shop-create-form-list {
+        width: 90%;
+    }
+}
+
+/* スマートフォン用ブレイクポイント */
+@media screen and (max-width: 480px) {
+    .shop-create-form-list__layout {
+        display: block;
+    }
+    .shop-create-form-list__term {
+        text-align: center;
+    }
+    .shop-create-form-list__description {
+        margin: 10px auto;
+        width: 90%;
+    }
+    .shop-create-form-list__description-input,
+    .shop-create-form-list__description-textarea,
+    .shop-create-form-list__description-select {
+        width: 100%;
+    }
+}

@@ -12,7 +12,7 @@
                 店舗情報作成ページ
             </h2>
             @foreach($owners as $owner)
-            <p>ようこそ、{{$owner->name}}さん</p>
+            <h3 class="shop-create__owner">{{$owner->name}}さん</h3>
             <form class="shop-create-form" action="/owner/done" enctype="multipart/form-data" method="post">
                 @csrf
                 <dl class="shop-create-form-list">
@@ -25,7 +25,7 @@
                         </dd>
                     </div>
                     <div class="form__error">
-                        @error('name')
+                        @error('shop_name')
                         {{$message}}
                         @enderror
                     </div>
@@ -38,7 +38,7 @@
                         </dd>
                     </div>
                     <div class="form__error">
-                        @error('email')
+                        @error('shop_overview')
                         {{$message}}
                         @enderror
                     </div>
@@ -56,7 +56,7 @@
                         </dd>
                     </div>
                     <div class="form__error">
-                        @error('password')
+                        @error('area_id')
                         {{$message}}
                         @enderror
                     </div>
@@ -74,7 +74,7 @@
                         </dd>
                     </div>
                     <div class="form__error">
-                        @error('password')
+                        @error('genre_id')
                         {{$message}}
                         @enderror
                     </div>
@@ -87,7 +87,7 @@
                         </dd>
                     </div>
                     <div class="form__error">
-                        @error('password')
+                        @error('shop_image')
                         {{$message}}
                         @enderror
                     </div>
