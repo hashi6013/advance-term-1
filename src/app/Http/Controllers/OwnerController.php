@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OwnerRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Genre;
@@ -25,7 +26,7 @@ class OwnerController extends Controller
         return view('owner.add', compact('owners', 'areas', 'genres'));
     }
 
-    public function done(Request $request)
+    public function done(OwnerRequest $request)
     {
         $user = Auth::User();
         $request['user_id'] = $user->id;

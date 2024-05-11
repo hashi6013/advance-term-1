@@ -21,7 +21,7 @@
                             <label for="shop_name">店舗名</label>
                         </dt>
                         <dd class="shop-create-form-list__description">
-                            <input class="shop-create-form-list__description-input" type="text" name="shop_name" id="shop_name" placeholder="店舗名" value="">
+                            <input class="shop-create-form-list__description-input" type="text" name="shop_name" id="shop_name" placeholder="店舗名" value="{{ old('shop_name') }}">
                         </dd>
                     </div>
                     <div class="form__error">
@@ -34,7 +34,7 @@
                             <label for="shop_overview">店舗概要</label>
                         </dt>
                         <dd class="shop-create-form-list__description">
-                            <textarea class="shop-create-form-list__description-textarea" name="shop_overview" id="shop_overview" placeholder="雰囲気の良いお店です。"></textarea>
+                            <textarea class="shop-create-form-list__description-textarea" name="shop_overview" id="shop_overview" placeholder="雰囲気の良いお店です。">{{ old('shop_overview') }}</textarea>
                         </dd>
                     </div>
                     <div class="form__error">
@@ -50,7 +50,7 @@
                             <select class="shop-create-form-list__description-select" name="area_id" id="area">
                             @foreach($areas as $area)
                                 <option hidden value="null">選択して下さい</option>
-                                <option value="{{$area->id}}">{{$area->prefecture}}</option>
+                                <option value="{{$area->id}}" @if(old('area_id') == $area->id) selected @endif>{{$area->prefecture}}</option>
                             @endforeach
                             </select>
                         </dd>
@@ -68,7 +68,7 @@
                             <select class="shop-create-form-list__description-select" name="genre_id" id="genre">
                             @foreach($genres as $genre)
                                 <option hidden value="null">選択して下さい</option>
-                                <option value="{{$genre->id}}">{{$genre->content}}</option>
+                                <option value="{{$genre->id}}" @if(old('genre_id') == $genre->id) selected @endif>{{$genre->content}}</option>
                             @endforeach
                             </select>
                         </dd>

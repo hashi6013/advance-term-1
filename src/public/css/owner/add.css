@@ -68,6 +68,13 @@
     color: #4d7fff;
 }
 
+.form__error {
+    width: 100%;
+    font-size: 1.2rem;
+    color: #ff0000;
+    text-align: center;
+}
+
 /* タブレット用ブレイクポイント */
 @media screen and (max-width: 768px) {
     .shop-create-form-list {
