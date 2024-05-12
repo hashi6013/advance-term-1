@@ -1,60 +1,61 @@
-.shop-create-container {
+.owner-edit-container {
     max-width: 1230px;
     margin: 0 auto 10px;
     padding: 0 40px;
 }
 
-.shop-create__title {
+.owner-edit__title {
     text-align: center;
     font-size: 2.0rem;
 }
 
-.shop-create__owner {
+.owner-edit__name {
     text-align: center;
     font-size: 1.7rem;
 }
 
-.shop-create-form-list {
+.owner-edit-form__list {
     width: 70%;
     background-color: #4d7fff;
     margin: 0 auto;
     border-radius: 4px;
 }
 
-.shop-create-form-list__layout {
+.owner-edit-form__list-layout {
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 15px;
 }
 
-.shop-create-form-list__term {
+.owner-edit-form__list-term {
     font-size: 1.5rem;
     color: #fff;
 }
 
-.shop-create-form-list__description {
+.owner-edit-form__list-description {
     width: 60%;
 }
 
-.shop-create-form-list__description-input,
-.shop-create-form-list__description-textarea,
-.shop-create-form-list__description-select {
+.owner-edit-form__list-description-input,
+.owner-edit-form__list-description-textarea,
+.owner-edit-form__list-description-select {
     width: 80%;
     margin-bottom: 10px;
     border: none;
 }
 
-.shop-create-form-list__description-textarea {
+.owner-edit-form__list-description-textarea {
+    resize: none;
     height: 50px;
 }
 
-.shop-create-form__button {
+.owner-edit-form__button {
     text-align: center;
     margin-top: 10px;
 }
 
-.shop-create-form__button-submit {
+.owner-edit-form__button-submit {
     background-color: #4d7fff;
     border: none;
     border-radius: 4px;
@@ -63,7 +64,7 @@
     cursor: pointer;
 }
 
-.shop-create-form__button-submit:hover {
+.owner-edit-form__button-submit:hover {
     background-color: #fff;
     color: #4d7fff;
 }
@@ -75,43 +76,46 @@
     text-align: center;
 }
 
-.shop-create-form__button-back {
+.owner-edit-form__button-back {
     text-decoration: none;
     font-size: 1.2rem;
     background-color: #ff0000;
-    padding: 6px 10px;
+    padding: 6px 20px;
     color: #fff;
     cursor: pointer;
     border-radius: 4px;
 }
 
-.shop-create-form__button-back:hover {
+.owner-edit-form__button-back:hover {
     background-color: #fff;
     color: #ff0000;
 }
 
 /* タブレット用ブレイクポイント */
 @media screen and (max-width: 768px) {
-    .shop-create-form-list {
+    .owner-edit-form__list {
         width: 90%;
     }
 }
 
 /* スマートフォン用ブレイクポイント */
 @media screen and (max-width: 480px) {
-    .shop-create-form-list__layout {
+    .owner-edit-form__list-layout {
         display: block;
     }
-    .shop-create-form-list__term {
+
+    .owner-edit-form__list-term {
         text-align: center;
     }
-    .shop-create-form-list__description {
+
+    .owner-edit-form__list-description {
         margin: 10px auto;
         width: 90%;
     }
-    .shop-create-form-list__description-input,
-    .shop-create-form-list__description-textarea,
-    .shop-create-form-list__description-select {
+
+    .owner-edit-form__list-description-input,
+    .owner-edit-form__list-description-textarea,
+    .owner-edit-form__list-description-select {
         width: 100%;
     }
 }

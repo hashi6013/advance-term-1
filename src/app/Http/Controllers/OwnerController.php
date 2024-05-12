@@ -50,4 +50,27 @@ class OwnerController extends Controller
         $reserve_lists = Reservation::where('shop_id', '=', $request->id)->get();
         return view('owner.list', compact('reserve_lists'));
     }
+
+    public function ownerEdit(Request $request)
+    {
+        $shop = Shop::find($request->id);
+        $areas = Area::all();
+        $genres = Genre::all();
+        return view('owner.edit', [
+            'form' => $shop,
+            'areas' => $areas,
+            'genres' => $genres,
+        ]);
+    }
+
+    public function ownerUpdate(OwnerRequest $request)
+    {
+        $img = $request->file('shop_image');
+        $path = $img->store('shops', 'public');
+        $form = $request->all();
+        $form['shop_image'] = $path;
+        unset($form['_token']);
+        Shop::find($request->id)->update($form);
+        return view('owner.update');
+    }
 }

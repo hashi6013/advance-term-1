@@ -49,6 +49,8 @@ Route::middleware('auth', 'owner')->group(function() {
     Route::get('/owner/add', [OwnerController::class, 'shop']);
     Route::post('/owner/done', [OwnerController::class, 'done']);
     Route::get('/owner/list', [OwnerController::class, 'list']);
+    Route::get('/owner/edit', [OwnerController::class, 'ownerEdit']);
+    Route::patch('/owner/update', [OwnerController::class, 'ownerUpdate']);
 });
 
 

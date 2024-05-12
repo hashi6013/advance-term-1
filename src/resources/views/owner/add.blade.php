@@ -94,6 +94,7 @@
                 </dl>
                 <input type="hidden" name="user_id">
                 <div class="shop-create-form__button">
+                    <a class="shop-create-form__button-back" href="/owner/home">戻る</a>
                     <button class="shop-create-form__button-submit" type="submit">
                         登録
                     </button>
