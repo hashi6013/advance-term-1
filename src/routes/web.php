@@ -7,6 +7,7 @@ use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,7 @@ Route::middleware('auth', 'admin')->group(function() {
     Route::get('/admin/list', [AdminController::class, 'list']);
     Route::get('/admin/add', [AdminController::class, 'add']);
     Route::post('/admin/done', [AdminController::class, 'store']);
+    Route::get('/email/information', [MailController::class, 'makeInformation']);
 });
 
 
