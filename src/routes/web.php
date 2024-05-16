@@ -33,6 +33,8 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::delete('/mypage/delete', [ReservationController::class, 'destroy']);
     Route::get('/mypage/edit', [ReservationController::class, 'edit']);
     Route::patch('/mypage/edit', [ReservationController::class, 'update']);
+    Route::get('/review', [ShopController::class, 'review']);
+    Route::post('/review/post', [ShopController::class, 'post']);
 });
 
 // 管理者用

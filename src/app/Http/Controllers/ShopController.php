@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ReviewRequest;
 use App\Models\Shop;
 use App\Models\Reservation;
 use App\Models\Genre;
@@ -10,8 +11,6 @@ use App\Models\Area;
 use App\Models\Favorite;
 use App\Models\Review;
 use Illuminate\Support\Facades\Auth;
-
-
 
 class ShopController extends Controller
 {
@@ -59,5 +58,23 @@ class ShopController extends Controller
         $profiles = Reservation::where('user_id',  '=', Auth::user()->id)->get();
         $favorites = Favorite::where('user_id', '=', Auth::user()->id)->get();
         return view('mypage', compact('users', 'profiles', 'favorites'));
+    }
+
+    public function review(Request $request)
+    {
+        $review = Shop::find($request->id);
+        $user = Auth::user();
+        return view('review', compact('review', 'user'));
+    }
+
+    public function post(ReviewRequest $request)
+    {
+        $user = Auth::user();
+        $shops = Shop::find($request->shop_id);
+        $request['user_id'] = $user->id;
+        Review::create($request->only([
+            'rate', 'comment', 'user_id', 'shop_id'
+        ]));
+        return view('post');
     }
 }

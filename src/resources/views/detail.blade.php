@@ -15,6 +15,9 @@
                 <h2 class="restaurant-detail__title">
                     {{$detail->shop_name}}
                 </h2>
+                <a class="restaurant-detail__review" href="/review?id={{$detail->id}}">
+                    <i class="fa-solid fa-pen-to-square"></i>投稿する
+                </a>
             </div>
             <div class="restaurant-detail__img">
                 <img src="{{ asset('storage/'.$detail->shop_image)}}" alt="お店の画像" decoding="async">

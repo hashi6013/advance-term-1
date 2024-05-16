@@ -21,6 +21,16 @@
     font-size: 2.0rem;
 }
 
+.restaurant-detail__review {
+    margin-left: 30px;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 5px 10px;
+    box-shadow: 3px 3px 2px #a4a4a4;
+    border-radius: 4px;
+}
+
 .fa-chevron-left {
     padding: 3px 6px;
     text-decoration: none;
