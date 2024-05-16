@@ -55,6 +55,7 @@ Route::middleware('auth', 'owner')->group(function() {
     Route::get('/owner/list', [OwnerController::class, 'list']);
     Route::get('/owner/edit', [OwnerController::class, 'ownerEdit']);
     Route::patch('/owner/update', [OwnerController::class, 'ownerUpdate']);
+    Route::get('/owner/feedback', [OwnerController::class, 'feedback']);
 });
 
 

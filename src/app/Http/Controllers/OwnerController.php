@@ -9,6 +9,7 @@ use App\Models\Genre;
 use App\Models\Area;
 use App\Models\Shop;
 use App\Models\Reservation;
+use App\Models\Review;
 
 class OwnerController extends Controller
 {
@@ -72,5 +73,11 @@ class OwnerController extends Controller
         unset($form['_token']);
         Shop::find($request->id)->update($form);
         return view('owner.update');
+    }
+
+    public function feedback(Request $request)
+    {
+        $feedback_lists = Review::where('shop_id', '=', $request->id)->get();
+        return view('owner.feedback', compact('feedback_lists'));
     }
 }

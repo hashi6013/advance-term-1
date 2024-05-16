@@ -21,6 +21,9 @@
                 <p class="owner__link">
                     <a href="/owner/edit?id={{$owner->id}}" class="owner__link-item">店舗情報変更ページへ</a>
                 </p>
+                <p class="owner__link">
+                    <a href="/owner/feedback?id={{$owner->id}}" class="owner__link-item">会員からのレビューページへ</a>
+                </p>
             </div>
         </div>
     </div>

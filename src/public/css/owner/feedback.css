@@ -1,0 +1,60 @@
+.feedback-container {
+    max-width: 1230px;
+    margin: 0 auto 10px;
+    padding: 0 40px;
+}
+
+.feedback__inner {
+    text-align: center;
+}
+
+.feedback__title {
+    font-size: 2.0rem;
+}
+
+.feedback__table {
+    margin: 0 auto;
+    width: 70vw;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.feedback__table-heading {
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+
+.feedback__table-detail {
+    font-size: 1.3rem;
+    white-space: nowrap;
+}
+
+.feedback__link {
+    font-size: 1.4rem;
+    margin-top: 30px;
+}
+
+.feedback__link-item {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0538ff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* タブレット用ブレイクポイント */
+@media screen and (max-width: 768px) {
+    .feedback__table {
+        width: 80vw;
+    }
+
+    .feedback__table-heading {
+        font-size: clamp(1.0rem, 2.0vw, 2.4rem);
+    }
+
+    .feedback__table-detail {
+        font-size: clamp(0.7rem, 1.8vw, 2.0rem);
+    }
+}
