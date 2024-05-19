@@ -70,14 +70,15 @@
     margin-top: 10px;
 }
 
-.edit-link {
+.status__link {
     text-align: right;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-right: 10px;
     border-radius: 4px;
 }
 
-.edit-link__item {
+.status__link-item--payment,
+.status__link-item--edit {
     padding: 0 5px;
     background-color: #fff;
     text-decoration: none;

@@ -14,6 +14,7 @@ class MailController extends Controller
     {
         $email = $request->email;
         $user = Auth::user();
+        // ユーザーテーブルから取得
 
         if (!$user) {
             return response()->json([
