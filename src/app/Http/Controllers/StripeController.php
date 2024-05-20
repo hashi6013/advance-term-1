@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use Stripe\Stripe;
 use Stripe\Charge;
 use Stripe\Customer;
+use App\Models\Reservation;
 
 class StripeController extends Controller
 {
-    public function paymentCreate()
+    public function paymentCreate(Request $request)
     {
-        return view('payment');
+        $payment = Reservation::find($request->id);
+        return view('payment', compact('payment'));
     }
 
     public function charge(Request $request)

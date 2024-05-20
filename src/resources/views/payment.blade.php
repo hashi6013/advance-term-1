@@ -21,10 +21,11 @@
                     data-locale="auto"
                     data-currency="JPY">
                 </script>
-
             </form>
+            <p class="payment__link">
+                <a class="payment__link-item" href="/mypage">マイページへ</a>
+            </p>
         </div>
     </div>
-    
 </div>
 @endsection
