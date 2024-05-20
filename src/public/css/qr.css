@@ -1,0 +1,31 @@
+.qr-container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.qr__inner {
+    text-align: center;
+}
+
+.qr__title {
+    font-size: 2.0rem;
+}
+
+.qr__link {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.qr__link-item {
+    padding: 2px 5px;
+    text-decoration: none;
+    background-color: #305dff;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.qr__link-item:hover {
+    background-color: #fff;
+    color: #305dff;
+}

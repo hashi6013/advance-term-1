@@ -9,6 +9,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\StripeController;
+use App\Http\Controllers\QrController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,7 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::post('/review/post', [ShopController::class, 'post']);
     Route::get('/mypage/payment/create', [StripeController::class, 'paymentCreate']);
     Route::post('/mypage/payment/create/charge', [StripeController::class, 'charge']);
+    Route::get('/mypage/qr', [QrController::class, 'qr']);
 });
 
 // 管理者用

@@ -60,10 +60,10 @@
                             </dd>
                         </div>
                         <div class="status__link">
+                            <a class="status__link-item--qr" href="/mypage/qr?id={{$profile->id}}">QRコード</a>
                             <a class="status__link-item--payment" href="/mypage/payment/create?id={{$profile->id}}">事前決済へ</a>
                             <a class="status__link-item--edit" href="/mypage/edit?id={{$profile->id}}">予約の変更</a>
                         </div>
-                        
                     </dl>
                 </div>
                 @endforeach

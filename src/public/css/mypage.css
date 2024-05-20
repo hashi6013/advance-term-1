@@ -78,13 +78,14 @@
 }
 
 .status__link-item--payment,
-.status__link-item--edit {
+.status__link-item--edit,
+.status__link-item--qr {
     padding: 0 5px;
     background-color: #fff;
     text-decoration: none;
     color: #305dff;
     border-radius: 4px;
-    font-size: clamp(1.2rem, 1.1vw, 1.8rem);
+    font-size: clamp(0.8rem, 1.1vw, 1.8rem);
     cursor: pointer;
 }
 
