@@ -10,23 +10,9 @@ use Illuminate\Support\Facades\Auth;
 
 class MailController extends Controller
 {
-    public function makeInformation(Request $request)
+    public function makeInformation()
     {
-        $email = $request->email;
-        $user = Auth::user();
-        // ユーザーテーブルから取得
-
-        if (!$user) {
-            return response()->json([
-                'error' => 'Not found email'
-            ], 400);
-        }
-
-        $mail = new SendInformation($user);
-        Mail::to($user->email)->send($mail);
-
-        return response()->json([
-            'message' => 'Email sent successfully'
-        ], 200);
+        $user = User::get();
+        Mail::to($user)->send(new SendInformation('Reseをいつもご利用いただき、ありがとうございます'));
     }
 }

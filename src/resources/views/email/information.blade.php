@@ -4,6 +4,6 @@
     <title>Reseからのお知らせ</title>
 </head>
 <body>
-    <p>Reseをご利用いただき、ありがとうございます。</p>
+    <p>{{ $information }}</p>
 </body>
 </html>

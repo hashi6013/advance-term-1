@@ -12,14 +12,16 @@ class SendInformation extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $information;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct($information)
     {
-        $this->user = $user;
+        $this->information = $information;
     }
 
     /**
@@ -29,6 +31,6 @@ class SendInformation extends Mailable
      */
     public function build()
     {
-        return $this->from('hello@example.com')->subject('Reseからのお知らせ')->view('email.information')->with(['user' => $this->user]);
+        return $this->from('hello@example.com')->subject('Reseからのお知らせ')->view('email.information');
     }
 }
